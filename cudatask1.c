@@ -4,7 +4,7 @@
 
 int main()
 {
-inti, j =0;
+int i, j =0;
 
 int A[N][N] =
     {
