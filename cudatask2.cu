@@ -1,4 +1,9 @@
+
+
 #include <stdio.h>
+#include <stdlib.h>
+//stdlib.h header provides variable types,several macros, and functions to performe general functions.
+
 #define N 4
  
  
