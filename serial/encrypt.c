@@ -22,7 +22,7 @@ FILE* open_file(char* filename);
 void close_file(FILE* fp);
 void read_line_in_file(FILE* fp, char** line);
 
-
+// Function to Open file
 FILE* open_file(char* filename) {
     FILE *fp;
     fp = fopen(filename, "r");
