@@ -28,7 +28,7 @@ FILE* open_file(char* filename) {
     fp = fopen(filename, "r");
     return fp;
 }
-
+//function for closing file
 void close_file(FILE* fp) {
     fclose(fp);
 }
