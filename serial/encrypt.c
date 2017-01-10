@@ -3,6 +3,7 @@
 /*
  * Encrypt all the strings in a given file.
  */
+ /* including c libraries */
 #define _GNU_SOURCE
 #include <crypt.h>
 #include <malloc.h>
