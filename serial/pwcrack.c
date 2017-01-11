@@ -91,6 +91,7 @@ int main(int argc, char **argv) {
     char *filename = argv[2];
     char *line = malloc(password_length + 1);
     FILE* fp = NULL;
+    //allocates the requested memory and returns a pointer to it.
     char* plain = malloc(sizeof(char) * (password_length + 1));
 
     fp = fopen(filename, "rb");
