@@ -43,7 +43,7 @@ void read_line_in_file(FILE* fp, char** line) {
     }
 }
 
-
+/* function for checking passwords of a specific length and return the password */
 void decrypt_password(const int password_length, char* password, char** plain) {
     //get possible alphabet size and password length
 	int possibilties = pow(ALPHABET_SIZE, password_length);
