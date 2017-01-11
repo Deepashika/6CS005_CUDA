@@ -54,6 +54,7 @@ void decrypt_password(const int password_length, char* password, char** plain) {
 
     for (i = 0; i < possibilties; i++) {
         val = i;
+                // Generate password characters one at a time.
         for (j = 0; j < password_length; j++) {
             letter = ALPHABET[val % ALPHABET_SIZE];
             word[j] = letter;
@@ -61,7 +62,7 @@ void decrypt_password(const int password_length, char* password, char** plain) {
         }
         strcpy(candidates[i], word);
     }
-
+ // 
      for (i = 0; i < possibilties; i++) {
          encrypted = crypt(candidates[i], SALT);
          if (strcmp(encrypted, password) == 0) {
@@ -82,6 +83,7 @@ int main(int argc, char **argv) {
     }
     
     //get the password length into password_length variable
+    
     int password_length = atoi(argv[1]);
     assert(password_length > 0);
     char *filename = argv[2];
