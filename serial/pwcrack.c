@@ -80,6 +80,8 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Usage: pwcrack n filename\nn should be the number of characters in the password.\n");
         return ERROR;
     }
+    
+    //get the password length into password_length variable
     int password_length = atoi(argv[1]);
     assert(password_length > 0);
     char *filename = argv[2];
