@@ -1,3 +1,5 @@
+//include C libraries
+
 #define _GNU_SOURCE
 #include <assert.h>
 #include <crypt.h>
@@ -22,7 +24,7 @@ const int ENCRYPTED_SIZE = 94;
 
 #define ERROR -1
 
-void decrypt_password(int, char*, char**);
+void decrypt// function for decrypting the password_password(int, char*, char**);
 
 
 void decrypt_password(const int password_length, char* password, char** plain) {
@@ -56,7 +58,7 @@ void decrypt_password(const int password_length, char* password, char** plain) {
 
     return;
 }
-
+// declare the main function of program
 int main(int argc, char **argv) {
     if (argc < 3) {
         fprintf(stderr, "Usage: pwcrack n ciphertext\nn should be the number of characters in the password.\nRemember to escape $ characters in your shell\n");
