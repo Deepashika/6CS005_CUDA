@@ -99,7 +99,7 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Could not find file: %s.\n", filename);
         return ERROR;
     }
-
+// read line by line and decrypt the password
     do {
         read_line_in_file(fp, &line);
         decrypt_password(password_length, line, &plain);
