@@ -1,6 +1,8 @@
+//include C libraries
 #include <crypt.h>
 #include <mpi.h>
 #include <stdio.h>
+
 
 int main() {
     printf("Your code should go here...\n");
