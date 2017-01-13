@@ -62,20 +62,7 @@ int C[N][N] =
 //calling the poniters
 int (*d_A)[N], (*d_B)[N], (*d_C)[N];
 
-for(i=0;i<N;i++){
-for(j=0;j<N;j++){
-C[i][j] = A[i][j] + B[i][j];
-        }
-    }
-
-printf("Sum of entered matrices: \n");
-
-for(i=0;i<N;i++){
-for(j=0;j<N;j++){
-printf("%d ", C[i][j]);
-        }
-printf("\n");
-    }
-
-return 0;
-}
+// allocate device copies of A,B, C	
+	cudaMalloc((void**)&d_A, (N*N)*sizeof(int));
+	cudaMalloc((void**)&d_B, (N*N)*sizeof(int));
+	cudaMalloc((void**)&d_C, (N*N)*sizeof(int));
