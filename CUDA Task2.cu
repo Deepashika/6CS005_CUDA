@@ -33,7 +33,6 @@ __global__ void Matri_Add(int A[][N], int B[][N], int C[][N]){
 
 int main()
 {
-int i, j =0;
 
 int A[N][N] =
     {
@@ -58,7 +57,10 @@ int C[N][N] =
       {0, 0, 0, 0},
       {0, 0, 0, 0}
    };
+   
 
+//calling the poniters
+int (*d_A)[N], (*d_B)[N], (*d_C)[N];
 
 for(i=0;i<N;i++){
 for(j=0;j<N;j++){
