@@ -66,3 +66,8 @@ int (*d_A)[N], (*d_B)[N], (*d_C)[N];
 	cudaMalloc((void**)&d_A, (N*N)*sizeof(int));
 	cudaMalloc((void**)&d_B, (N*N)*sizeof(int));
 	cudaMalloc((void**)&d_C, (N*N)*sizeof(int));
+	
+// CUDA memory copy types(copy input to device from host)
+  cudaMemcpy(d_A, A, (N*N)*sizeof(int), cudaMemcpyHostToDevice);
+  cudaMemcpy(d_B, B, (N*N)*sizeof(int), cudaMemcpyHostToDevice);
+  cudaMemcpy(d_C, C, (N*N)*sizeof(int), cudaMemcpyHostToDevice);
