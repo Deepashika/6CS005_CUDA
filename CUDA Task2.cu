@@ -1,3 +1,6 @@
+// Name: Deepashika Maduwanthi
+// Student Id: 1432291
+//--------------------------------------------------
 #include<stdio.h>
 
 #define N 4
