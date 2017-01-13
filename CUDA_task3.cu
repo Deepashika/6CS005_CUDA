@@ -15,12 +15,10 @@ and functions to performe general functions.*/
 
 #define N 4
 
- 
 /*Global function is also called "kernels".
  It's the functions that you may call from the host side.
  
 */
-
 __global__ void Matri_Add(int A[][N], int B[][N], int C[][N]){
 	
 	
