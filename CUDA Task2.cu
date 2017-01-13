@@ -1,7 +1,18 @@
 // Name: Deepashika Maduwanthi
 // Student Id: 1432291
 //--------------------------------------------------
+
+/*include <stdlib.h> header provides variable types,several macros, 
+and functions to performe general functions.
+
+ include <stdio.h> 
+-the compiler to include this header file for compilation
+*/
+
+
 #include<stdio.h>
+#include <stdlib.h>
+
 
 #define N 4
 
