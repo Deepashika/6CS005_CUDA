@@ -30,7 +30,6 @@ __global__ void Matri_Add(int A[][N], int B[][N], int C[][N]){
 		C[i][j] = A [i][j] + B[i][j];
 }
 
-
 int main()
 {
 
@@ -57,7 +56,6 @@ int C[N][N] =
       {0, 0, 0, 0},
       {0, 0, 0, 0}
    };
-   
 
 //calling the poniters
 int (*d_A)[N], (*d_B)[N], (*d_C)[N];
@@ -73,7 +71,6 @@ int (*d_A)[N], (*d_B)[N], (*d_C)[N];
   cudaMemcpy(d_C, C, (N*N)*sizeof(int), cudaMemcpyHostToDevice);
 
    int numBlocks = 1;
-  
   // N threads (kernel invoke N threads)
   dim3 threadsPerBlock(N,N);
   Matri_Add<<<numBlocks,threadsPerBlock>>>(d_A,d_B,d_C);
@@ -88,4 +85,12 @@ int (*d_A)[N], (*d_B)[N], (*d_C)[N];
 	}
 	printf("\n");
 }
-  
+  //  cleanup 
+  cudaFree(d_A); 
+  cudaFree(d_B); 
+  cudaFree(d_C);
+
+  printf("\n");
+
+  return 0;
+}
