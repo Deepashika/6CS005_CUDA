@@ -14,6 +14,7 @@ and functions to performe general functions.
 #include <stdlib.h>
 
 
+
 #define N 4
 
 /*Global function is also called "kernels".
