@@ -50,33 +50,20 @@ void randmatfunc(int newmat[N][N]){
   printf("\n-----------------------------------\n"); 
 }
 }
-// main function of the program
+
 
 int main(){
 
-int A[N][N] =
-    {
-      {1, 5, 6, 7},
-      {4, 4, 8, 0},
-      {2, 3, 4, 5},
-      {2, 3, 4, 5}
-   };
+/*To generate A and B matrix automatically, code was changes as below(Remove matrix numbers)  */
 
-  int B[N][N] = 
-    {
-      {1, 5, 6, 7},
-      {4, 4, 8, 0},
-      {2, 3, 4, 5},
-      {2, 3, 4, 5}
-   };
+int A[N][N];  
+randmatfunc(A);
+  
+int B[N][N];  
+randmatfunc(B);  
 
-  int C[N][N] = 
-     {
-      {0, 0, 0, 0},
-      {0, 0, 0, 0},
-      {0, 0, 0, 0},
-      {0, 0, 0, 0}
-   };
+int C[N][N];
+
 
 //calling the poniters
   int (*d_A)[N], (*d_B)[N], (*d_C)[N];
