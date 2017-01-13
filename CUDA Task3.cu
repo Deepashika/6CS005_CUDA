@@ -37,20 +37,19 @@ __global__ void Matri_Add(int A[][N], int B[][N], int C[][N]){
 
 }
 
-int randmatfunc(){
+//function type was changed and added new parameter to the function
+
+void randmatfunc(int newmat[N][N]){
   int i, j, k; 
     for(i=0;i<N;i++){
         for(j=0;j<N;j++){
           k = rand() % 100 + 1;;
             printf("%d ", k);
             newmat[i][j] =k;
-        }
-        printf("\n");
-       
-    } 
+}
   printf("\n-----------------------------------\n"); 
 }
-
+}
 // main function of the program
 
 int main(){
