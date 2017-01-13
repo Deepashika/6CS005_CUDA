@@ -16,6 +16,21 @@ and functions to performe general functions.
 
 #define N 4
 
+/*Global function is also called "kernels".
+ It's the functions that you may call from the host side.
+ Matri_Add()will execute on the device
+Matri_Add()will be called from the host
+*/
+
+__global__ void Matri_Add(int A[][N], int B[][N], int C[][N]){
+	 // Thread row and column 
+        int i = threadIdx.x;
+		int j = threadIdx.y;
+
+		C[i][j] = A [i][j] + B[i][j];
+}
+
+
 int main()
 {
 int i, j =0;
