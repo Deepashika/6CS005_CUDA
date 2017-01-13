@@ -2,7 +2,7 @@
 // Student Id: 1432291
 //--------------------------------------------------
 
-
+/modify the CUDA_task2 program to generate A and B matrix automatically/
 
 /*These are header files, include <stdio.h> 
 -the compiler to include this header file for compilation
@@ -20,7 +20,11 @@ and functions to performe general functions.*/
  Matri_Add()will execute on the device
 Matri_Add()will be called from the host
 */
+  
+/*Global function is also called "kernels".
+ It's the functions that you may call from the host side.
  
+*/
 
 __global__ void Matri_Add(int A[][N], int B[][N], int C[][N]){
 	
