@@ -71,3 +71,21 @@ int (*d_A)[N], (*d_B)[N], (*d_C)[N];
   cudaMemcpy(d_A, A, (N*N)*sizeof(int), cudaMemcpyHostToDevice);
   cudaMemcpy(d_B, B, (N*N)*sizeof(int), cudaMemcpyHostToDevice);
   cudaMemcpy(d_C, C, (N*N)*sizeof(int), cudaMemcpyHostToDevice);
+
+   int numBlocks = 1;
+  
+  // N threads (kernel invoke N threads)
+  dim3 threadsPerBlock(N,N);
+  Matri_Add<<<numBlocks,threadsPerBlock>>>(d_A,d_B,d_C);
+
+  // copy result of device back to host 
+  cudaMemcpy(C, d_C, (N*N)*sizeof(int), cudaMemcpyDeviceToHost);
+
+	int i, j; printf("C = \n"); 
+	for(i=0;i<N;i++){
+	for(j=0;j<N;j++){ 
+	printf("%d ", C[i][j]);
+	}
+	printf("\n");
+}
+  
